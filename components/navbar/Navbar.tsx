@@ -44,7 +44,7 @@ const Navbar: FC<NavbarProps> = ({ search, setSearch }) => {
           </svg>
         </button>
         <li className="lg:w-2/12 w-6/12">
-          <Profile name="Epictetus" />
+          <Profile name="EpictetusNews" />
         </li>
         <button className="w-3/12 text-right lg:hidden" onClick={() => setViewSearch(!viewSearch)}>
           <svg

@@ -9,7 +9,7 @@ import TopNews from "../components/news/TopNews";
 import { ContentData } from "../store/ContentData";
 import Footer from "../components/footer/Footer";
 import { useState } from "react";
-import NewsCard from '../components/news/NewsCard';
+import NewsCard from "../components/news/NewsCard";
 
 export default function Home() {
   const [search, setSearch] = useState<string>("");
@@ -17,10 +17,22 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Epictetus</title>
+        <title>EpictetusNews</title>
+        <meta property="og:site_name" content="epictetusnews.vercel.app" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="EpictetusNews" />
+        <meta
+          property="og:description"
+          content="EpictetusNews is slicinged design develop by Adrian Aji Septa"
+        />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="googlebot-news" content="index, follow" />
+        <meta name="robots" content="index, follow" />
+        <meta name="geo.country" content="id" />
+        <meta name="geo.placename" content="Indonesia" />
         <meta
           name="description"
-          content="Slicing design develop by Adrian Aji Septa"
+          content="EpictetusNews is slicinged design develop by Adrian Aji Septa"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
