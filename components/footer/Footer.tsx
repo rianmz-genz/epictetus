@@ -5,7 +5,7 @@ interface FooterProps{
 const Footer:FC<FooterProps> = ({copy}) => {
   return (
     <footer className='w-full text-center '>
-      <p className='text-xs text-gray-500'>{copy}</p>
+      <p className='text-xs text-gray-400'>{copy}</p>
     </footer>
   )
 }

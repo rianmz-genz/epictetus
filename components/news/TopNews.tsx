@@ -1,21 +1,21 @@
 import React, { FC } from "react";
+import NewsInfo from './NewsInfo';
 const TopNews:FC<News> = (topNews) => {
   return (
-    <article className="w-full h-fit mt-9 flex items-center">
-      <div className="w-8/12 pr-5">
+    <article className="w-full h-fit mt-9 flex items-center flex-wrap border-b pb-8 lg:border-none lg:pb-0 border-gray-600">
+      <div className="lg:w-8/12 md:pr-5 md:w-7/12 w-full">
         <img src={topNews.imageNewsUrl} />
       </div>
-      <div className="w-4/12">
-        <p className="text-xs text-gray-500 mb-3">{topNews.categoryAuthor} | {topNews.releaseDate}</p>
-        <h1 className="text-xl mb-3">{topNews.title}</h1>
-        <p className="text-base text-gray-500 mb-4 w-9/12">{topNews.description}</p>
-        <div className="flex items-center">
-            <img src={topNews.imageAuthor} />
-            <div className="ml-3">
-                <p className="mb-1">{topNews.authorName}</p>
-                <p className="text-xs text-gray-500">{topNews.categoryAuthor}</p>
-            </div>
-        </div>
+      <div className="lg:w-4/12 md:w-5/12 w-full mt-3">
+        <NewsInfo 
+          imageNewsUrl={topNews.imageNewsUrl}
+          categoryAuthor={topNews.categoryAuthor}
+          releaseDate={topNews.releaseDate}
+          title={topNews.title}
+          description={topNews.description}
+          imageAuthor={topNews.imageAuthor}
+          authorName={topNews.authorName}
+        />
       </div>
     </article>
   );

@@ -22,3 +22,6 @@ interface NavbarProps{
     search: string
     setSearch: React.Dispatch<React.SetStateAction<string>>
   }
+  interface ContainerProps{
+    children: ReactNode
+}

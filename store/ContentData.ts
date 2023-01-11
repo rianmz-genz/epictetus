@@ -22,7 +22,7 @@ export const ContentData: ContentData = {
             description: 'Auctor Porta. Augue vitae diam mauris faucibus blandit elit per, feugiat leo dui orci. Etiam vestibulum. Nostra netus per conubia dolor.',
             imageAuthor: '/images/author-2.svg',
             authorName: 'Jenny Wilson',
-            categoryAuthor: 'Jenny Wilson'
+            categoryAuthor: 'Internet'
         },
         {
             imageNewsUrl: '/images/thumbnail-3.svg',

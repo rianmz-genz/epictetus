@@ -7,9 +7,9 @@ import Container from "../components/layout/Container";
 import Navbar from "../components/navbar/Navbar";
 import TopNews from "../components/news/TopNews";
 import { ContentData } from "../store/ContentData";
-import News from "../components/news/News";
 import Footer from "../components/footer/Footer";
 import { useState } from "react";
+import NewsCard from '../components/news/NewsCard';
 
 export default function Home() {
   const [search, setSearch] = useState<string>("");
@@ -29,7 +29,7 @@ export default function Home() {
         <Container>
           <Navbar search={search} setSearch={setSearch} />
           <TopNews {...topNews} />
-          <div className="w-full h-fit mt-12 grid grid-cols-3 gap-x-5">
+          <div className="w-full h-fit mt-12 flex flex-wrap">
             {news.map(
               (
                 {
@@ -43,7 +43,7 @@ export default function Home() {
                 },
                 index
               ) => (
-                <News
+                <NewsCard
                   key={index}
                   title={title}
                   imageAuthor={imageAuthor}

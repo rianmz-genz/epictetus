@@ -14,7 +14,7 @@ const SearchInput:FC<NavbarProps> = ({search, setSearch}) => {
       onKeyUp={(e)=> handleSearch(e)}
       onChange={(e)=> setSearch(e.target.value)}
       placeholder="Search ..."
-      className="bg-gray-800/60 py-2 rounded-full pl-9 bg-search focus:outline-none focus:shadow-lg"
+      className="lg:bg-gray-800/60 bg-gray-800 py-2  w-full rounded-lg lg:rounded-full pl-9 bg-search focus:outline-none focus:shadow-lg"
     />
   );
 };
