@@ -1,10 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 @layer base{
     *{
-        font-family: 'Patrick Hand', cursive;
+        font-family: 'Plus Jakarta Sans', sans-serif;
     }
 }

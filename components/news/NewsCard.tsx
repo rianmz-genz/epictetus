@@ -10,7 +10,7 @@ const NewsCard: FC<News> = ({
   authorName,
 }) => {
   return (
-    <article className="md:w-4/12 w-full px-2 mb-8">
+    <article className="md:w-4/12 w-full px-2 mb-12 lg:mb-8">
       <img src={imageNewsUrl} className="mb-3 w-full" />
       <p className="text-xs text-gray-400 mb-2">
         {categoryAuthor} | {releaseDate}
