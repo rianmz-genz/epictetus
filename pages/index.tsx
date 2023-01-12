@@ -1,14 +1,12 @@
 import Head from "next/head";
-import Image from "next/image";
+import { useState } from "react";
 // import content
-ContentData;
+import { ContentData } from "../store/ContentData";
 // import components
 import Container from "../components/layout/Container";
 import Navbar from "../components/navbar/Navbar";
 import TopNews from "../components/news/TopNews";
-import { ContentData } from "../store/ContentData";
 import Footer from "../components/footer/Footer";
-import { useState } from "react";
 import NewsCard from "../components/news/NewsCard";
 
 export default function Home() {

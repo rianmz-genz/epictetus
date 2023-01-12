@@ -90,9 +90,9 @@ const Navbar: FC<NavbarProps> = ({ search, setSearch }) => {
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
-          <li>Ui Design</li>
-          <li>Front End</li>
-          <li>Back End</li>
+          <li><a href="/category/uidesign">Ui Design</a></li>
+          <li><a href="/category/frontend">Front End</a></li>
+          <li><a href="/category/backend">Back End</a></li>
           <div className="relative group transition-all duration-300">
             <li onClick={() => setExc(!exc)} className="flex items-center">
               Lainya
@@ -120,7 +120,7 @@ const Navbar: FC<NavbarProps> = ({ search, setSearch }) => {
                     key={i}
                     className="border-b border-gray-900 w-full hover:bg-gray-700 h-full py-2 flex items-center justify-center last:border-none"
                   >
-                    <a href={href}>{text}</a>
+                    <a href={`/category/${href}`}>{text}</a>
                   </li>
                 ))}
               </div>

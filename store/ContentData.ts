@@ -1,9 +1,9 @@
 
 export const ContentData: ContentData = {
     dropDownList : [
-        { text: "Internet", href: "#" },
-        { text: "Books", href: "#" },
-        { text: "Open Source", href: "#" },
+        { text: "Internet", href: "internet" },
+        { text: "Books", href: "books" },
+        { text: "Open Source", href: "opencsource" },
       ],
       topNews: {
         imageNewsUrl: '/images/image1.svg',

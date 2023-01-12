@@ -1,4 +1,7 @@
 import React, { FC } from "react";
+import { useRouter } from "next/router";
+import AuthorProfile from "../profile/AuthorProfile";
+import NewsTitle from "./NewsTitle";
 
 const NewsCard: FC<News> = ({
   imageNewsUrl,
@@ -9,21 +12,26 @@ const NewsCard: FC<News> = ({
   imageAuthor,
   authorName,
 }) => {
+  const router = useRouter();
+  const handleDetail = (title: string) => {
+    router.push(`/detail/${title}`);
+  };
   return (
     <article className="md:w-4/12 w-full px-2 mb-12 lg:mb-8">
       <img src={imageNewsUrl} className="mb-3 w-full" />
-      <p className="text-xs text-gray-400 mb-2">
-        {categoryAuthor} | {releaseDate}
-      </p>
-      <h1 className="text-lg mb-2">{title}</h1>
+      <NewsTitle categoryAuthor={categoryAuthor} releaseDate={releaseDate} />
+      <h1
+        onClick={() => handleDetail(title)}
+        className="text-lg mb-2 cursor-pointer hover:underline transition-all duration-300 hover:transition-all"
+      >
+        {title}
+      </h1>
       <p className="text-gray-400 text-sm mb-4">{description}</p>
-      <div className="flex items-center">
-        <img src={imageAuthor} />
-        <div className="ml-3">
-          <p>{authorName}</p>
-          <p className="text-gray-400 text-sm">{categoryAuthor}</p>
-        </div>
-      </div>
+      <AuthorProfile
+        imageAuthor={imageAuthor}
+        authorName={authorName}
+        categoryAuthor={categoryAuthor}
+      />
     </article>
   );
 };
