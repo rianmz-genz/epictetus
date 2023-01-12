@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { ContentData } from "../../store/ContentData";
 import DetailNews from "../../components/news/DetailNews";
 import AuthorProfile from "../../components/profile/AuthorProfile";
+import Footer from "../../components/footer/Footer";
 const DetailPage = () => {
   const router = useRouter();
   const detail = router.query?.title;
@@ -33,6 +34,7 @@ const DetailPage = () => {
         </div>
         <img className="lg:w-8/12 mt-6 mx-auto" src={x?.imageNewsUrl} />
         <p className="lg:w-6/12 mt-6 mx-auto">{x?.description}</p>
+        <Footer copy='Copyright (c) 2023 - Develop by Adrian' />
       </Container>
     </main>
   );
