@@ -17,7 +17,7 @@ const NewsInfo: FC<News> = ({
       <h1 className="text-lg mb-2">{title}</h1>
       <p className="text-gray-400 text-sm mb-4">{description}</p>
       <div className="flex items-center">
-        <img src={imageAuthor} />
+        <img src={imageAuthor} alt='image' />
         <div className="ml-3">
           <p>{authorName}</p>
           <p className="text-gray-400 text-sm">{categoryAuthor}</p>

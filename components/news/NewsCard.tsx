@@ -18,7 +18,7 @@ const NewsCard: FC<News> = ({
   };
   return (
     <article className="md:w-4/12 w-full px-2 mb-12 lg:mb-8">
-      <img src={imageNewsUrl} className="mb-3 w-full" />
+      <img src={imageNewsUrl} className="mb-3 w-full" alt="image" />
       <NewsTitle categoryAuthor={categoryAuthor} releaseDate={releaseDate} />
       <h1
         onClick={() => handleDetail(title)}

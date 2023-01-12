@@ -2,6 +2,7 @@ import React, { FC, useState } from "react";
 import Profile from "../profile/Profile";
 import SearchInput from "../input/SearchInput";
 import { ContentData } from "../../store/ContentData";
+import Link from "next/link";
 
 const Navbar: FC<NavbarProps> = ({ search, setSearch }) => {
   const [exc, setExc] = useState<boolean>(false);
@@ -90,9 +91,9 @@ const Navbar: FC<NavbarProps> = ({ search, setSearch }) => {
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
-          <li><a href="/category/uidesign">Ui Design</a></li>
-          <li><a href="/category/frontend">Front End</a></li>
-          <li><a href="/category/backend">Back End</a></li>
+          <li><Link href="/category/uidesign">Ui Design</Link></li>
+          <li><Link href="/category/frontend">Front End</Link></li>
+          <li><Link href="/category/backend">Back End</Link></li>
           <div className="relative group transition-all duration-300">
             <li onClick={() => setExc(!exc)} className="flex items-center">
               Lainya
@@ -120,7 +121,7 @@ const Navbar: FC<NavbarProps> = ({ search, setSearch }) => {
                     key={i}
                     className="border-b border-gray-900 w-full hover:bg-gray-700 h-full py-2 flex items-center justify-center last:border-none"
                   >
-                    <a href={`/category/${href}`}>{text}</a>
+                    <Link href={`/category/${href}`}>{text}</Link>
                   </li>
                 ))}
               </div>

@@ -32,7 +32,7 @@ const DetailPage = () => {
             categoryAuthor={x?.categoryAuthor}
           />
         </div>
-        <img className="lg:w-8/12 mt-6 mx-auto" src={x?.imageNewsUrl} />
+        <img className="lg:w-8/12 mt-6 mx-auto" src={x?.imageNewsUrl} alt="image" />
         <p className="lg:w-6/12 mt-6 mx-auto">{x?.description}</p>
         <Footer copy='Copyright (c) 2023 - Develop by Adrian' />
       </Container>

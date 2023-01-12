@@ -9,9 +9,9 @@ const CategoryPage = () => {
   const [searched, setSearched] = useState<string>("");
   const router = useRouter();
   const {news} = ContentData
-  const keyword = router.query?.thecategory as string;
+  const category = router.query?.thecategory as string;
   useEffect(() => {
-    setSearched(keyword);
+    setSearched(category);
   }, [router.isReady]);
   return (
     <main className="bg-gradient-to-b text-white from-gray-700 to-gray-900 w-full min-h-screen">
